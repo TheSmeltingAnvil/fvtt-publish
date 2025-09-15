@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    /* Projects */
+    "composite": true,
+    /* Modules */
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    /* Emit */
+    "noEmit": true,
+    /* Interop Constraints */
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    /* Type Checking */
+    "strict": true,
+    /* Completeness */
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+  },
+  "include": ["eslint.config.ts", "prettier.config.ts", "rollup.config.ts"],
+}

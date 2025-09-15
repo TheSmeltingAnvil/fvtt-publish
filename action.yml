@@ -1,0 +1,22 @@
+name: FoundryVTT Publish Action
+description: GitHub Action to publish packages (systems and modules) to FoundryVTT.com
+
+inputs:
+  dry-run:
+    description: If true, will run the action without actually publishing to FoundryVTT.com
+    required: false
+    default: "false"
+  manifest:
+    description: Full URL to the FoundryVTT Manifest file, either system.json or module.json inside release
+    required: true
+  token:
+    description: The private token from FoundryVTT.com
+    required: true
+
+outputs:
+  success:
+    description: Whether the publish was successful
+
+runs:
+  using: node24
+  main: dist/index.js
